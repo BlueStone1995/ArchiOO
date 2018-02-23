@@ -6,11 +6,12 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Exo3;
+package Exo3.Exception;
 
-public class ObjetException extends Exception {
+public class DivisionException extends Exception {
 
-    public ObjetException() {
-        System.out.println("Opération inconnue !");
+    public void DivisionException(String e) {
+
+        System.out.println("Division par 0 interdite !");
     }
 }

@@ -8,9 +8,16 @@
 
 package Exo3.Test;
 
+import Exo3.Calculator;
+import Exo3.Operation;
+
+import java.util.Map;
+
 import static org.junit.Assert.*;
 
 public class CalculatorTest {
+
+    Calculator calculator = new Calculator();
 
     @org.junit.Before
     public void setUp() throws Exception { // setup des données avant chaque test
@@ -21,14 +28,18 @@ public class CalculatorTest {
     }
 
     @org.junit.Test
-    public void addOperation() {
+    public void testAddOperation() { // A faire
+        System.out.println("Test addOperztion");
+        Map<String, Operation> expResult;
+        // float result = calculator.addOperation("+", AdditionTest);
+        // assertEquals(expResult, result, 0);
     }
 
     @org.junit.Test
-    public void init() {
+    public void testInit() {
     }
 
     @org.junit.Test
-    public void calc() {
+    public void testCalc() {
     }
 }

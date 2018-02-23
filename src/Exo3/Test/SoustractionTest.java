@@ -16,6 +16,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class SoustractionTest {
+
     // Données pour mes test :
     Soustraction soustraction = new Soustraction();
     float a = -1;

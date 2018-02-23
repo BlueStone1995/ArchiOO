@@ -10,7 +10,7 @@ public class Calculator {
     private float b;
     private String op;
 
-    Calculator() {
+    public Calculator() {
         this.a = 0;
         this.b = 0;
         this.op = "+";

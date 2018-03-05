@@ -8,6 +8,7 @@
 
 package Exo3.Test;
 
+import Exo3.Calculator;
 import Exo3.GestionnaireCalculette;
 import Exo3.Test.CalculatorTest;
 import org.junit.After;
@@ -19,6 +20,9 @@ import static org.junit.Assert.*;
 public class GestionnaireCalculetteTest {
 
     GestionnaireCalculette gestionnaireCalculette = new GestionnaireCalculette();
+
+    // Données
+    Calculator calculator = new Calculator();
     float a = -1;
     float b = 3;
     String op = "+";
@@ -26,21 +30,27 @@ public class GestionnaireCalculetteTest {
     @Before
     public void setUp() throws Exception {
         System.out.println("Defining test data");
+
+        Calculator calculator = new Calculator();
         float a = -1;
         float b = 3;
-        op = "+";
+        String op = "+";
     }
 
     @After
     public void tearDown() throws Exception {
         System.out.println("Closing test");
+
+        Calculator calculator = new Calculator();
         float a = 0;
         float b = 0;
+        String op = " ";
     }
 
     @Test
     public void testCalculer() {
-        System.out.println("Test execute");
+        System.out.println("Test calculer execute");
+
         float expResult = 2;
         float result = gestionnaireCalculette.calculer(a, b, op);
         assertEquals(expResult, result, 0);
@@ -48,6 +58,7 @@ public class GestionnaireCalculetteTest {
 
     @Test
     public void testLancerCalculette() {
-
+        System.out.println("Test lancer execute");
+        gestionnaireCalculette.lancerCalculette();
     }
 }

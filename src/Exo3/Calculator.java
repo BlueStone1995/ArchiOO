@@ -29,8 +29,6 @@ public class Calculator {
     }
 
     public float calc() {
-        float r = 0;
-
         Operation o = this.operations.get(this.op); //Récupère opération dans mon map via sa version string
 
         if (o == null) {

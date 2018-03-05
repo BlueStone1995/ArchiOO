@@ -6,7 +6,7 @@ public class GestionnaireCalculette {
 
     private Calculator c;
 
-    GestionnaireCalculette() {
+    public GestionnaireCalculette() {
         c = new Calculator();
         c.addOperation("+", new Addition()); //via méthode de type set : addOperation
         c.addOperation("-", new Soustraction());

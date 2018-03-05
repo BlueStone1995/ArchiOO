@@ -8,38 +8,65 @@
 
 package Exo3.Test;
 
+import Exo3.Addition;
 import Exo3.Calculator;
 import Exo3.Operation;
 
+import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
 
     Calculator calculator = new Calculator();
 
+    // Données
+    float a = -1;
+    float b = 3;
+    String op = "+";
+    Addition add = new Addition();
+
+
     @org.junit.Before
     public void setUp() throws Exception { // setup des données avant chaque test
+        System.out.println("Defining test data");
+        float a = -1;
+        float b = 3;
+        op = "+";
+        Addition add = new Addition();
     }
 
     @org.junit.After
     public void tearDown() throws Exception { // Cleanup apres chaque
+        System.out.println("Closing test");
+        float a = 0;
+        float b = 0;
+        Addition add = new Addition();
     }
 
     @org.junit.Test
-    public void testAddOperation() { // A faire
-        System.out.println("Test addOperztion");
-        Map<String, Operation> expResult;
-        // float result = calculator.addOperation("+", AdditionTest);
-        // assertEquals(expResult, result, 0);
+    public void testAddOperation() {
+        System.out.println("Test addOperation execute");
+        calculator.addOperation(op, add);
     }
+
 
     @org.junit.Test
     public void testInit() {
+        System.out.println("Test init execute");
+        calculator.init(a, b, op);
     }
 
     @org.junit.Test
     public void testCalc() {
+        System.out.println("Test calc execute");
+
+        calculator.addOperation(op, add);
+        calculator.init(a, b, op);
+
+        float expResult = 2;
+        float result = calculator.calc();
+        assertEquals(expResult, result, 0);
     }
 }

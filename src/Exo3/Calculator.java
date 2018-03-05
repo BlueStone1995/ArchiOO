@@ -35,6 +35,7 @@ public class Calculator {
             System.out.println("Opération inconnue");
         }
 
+
         return o.execute(a, b); // Retourne résultat
 
     }

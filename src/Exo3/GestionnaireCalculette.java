@@ -22,25 +22,30 @@ public class GestionnaireCalculette {
 
     public void lancerCalculette() {
         Scanner sc = new Scanner(System.in);
+        String cont = "y";
 
+        while (cont.equals("y")) {
+            //Entrer commande utilisateur
+            System.out.println("Entrer chiffre a : ");
+            float a = sc.nextFloat();
 
-        //Entrer commande utilisateur
-        System.out.println("Entrer chiffre a : ");
-        float a = sc.nextFloat();
+            System.out.println("Entrer chiffre b : ");
+            float b = sc.nextFloat();
+            sc.nextLine();
 
-        System.out.println("Entrer chiffre b : ");
-        float b = sc.nextFloat();
-        sc.nextLine();
+            System.out.println("Entrer opération op : ");
+            String op = sc.nextLine();
 
-        System.out.println("Entrer opération op : ");
-        String op = sc.nextLine();
+            //Calcul
+            try {
+                float r = this.calculer(a, b, op);
+                System.out.println("Resultat : " + a + " " + op + " " + b + " = " + r);
+            } catch (ArithmeticException e) {
+                System.out.println("Division par 0 interdite !");
+            }
 
-        //Calcul
-        try {
-            float r = this.calculer(a, b, op);
-            System.out.println("Resultat : " + a + " " + op + " " + b + " = " + r);
-        } catch (ArithmeticException e) {
-            System.out.println("Division par 0 interdite !");
+            System.out.println("Nouveau calcul ? (y/n)");
+            cont = sc.nextLine();
         }
     }
 }

@@ -11,6 +11,7 @@ package Exo3.Exception;
 public class ObjetException extends Exception {
 
     public ObjetException() {
+
         System.out.println("Opération inconnue !");
     }
 }

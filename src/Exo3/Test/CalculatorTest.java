@@ -10,6 +10,8 @@ package Exo3.Test;
 
 import Exo3.Addition;
 import Exo3.Calculator;
+import Exo3.Exception.DivisionException;
+import Exo3.Exception.OpException;
 import Exo3.Operation;
 
 import java.util.HashMap;
@@ -46,7 +48,7 @@ public class CalculatorTest {
     }
 
     @org.junit.Test
-    public void testAddOperation() {
+    public void testAddOperation() throws OpException {
         System.out.println("Test addOperation execute");
         calculator.addOperation(op, add);
     }
@@ -59,7 +61,7 @@ public class CalculatorTest {
     }
 
     @org.junit.Test
-    public void testCalc() {
+    public void testCalc() throws OpException, DivisionException {
         System.out.println("Test calc execute");
 
         calculator.addOperation(op, add);

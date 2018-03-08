@@ -9,6 +9,8 @@
 package Exo3.Test;
 
 import Exo3.Calculator;
+import Exo3.Exception.DivisionException;
+import Exo3.Exception.OpException;
 import Exo3.GestionnaireCalculette;
 import Exo3.Test.CalculatorTest;
 import org.junit.After;
@@ -19,7 +21,15 @@ import static org.junit.Assert.*;
 
 public class GestionnaireCalculetteTest {
 
-    GestionnaireCalculette gestionnaireCalculette = new GestionnaireCalculette();
+    GestionnaireCalculette gestionnaireCalculette;
+
+    {
+        try {
+            gestionnaireCalculette = new GestionnaireCalculette();
+        } catch (OpException e) {
+            System.out.println("Opération inconnue !");
+        }
+    }
 
     // Données
     Calculator calculator = new Calculator();
@@ -48,7 +58,7 @@ public class GestionnaireCalculetteTest {
     }
 
     @Test
-    public void testCalculer() {
+    public void testCalculer() throws OpException, DivisionException {
         System.out.println("Test calculer execute");
 
         float expResult = 2;
@@ -56,9 +66,10 @@ public class GestionnaireCalculetteTest {
         assertEquals(expResult, result, 0);
     }
 
-    @Test
-    public void testLancerCalculette() {
-        System.out.println("Test lancer execute");
-        gestionnaireCalculette.lancerCalculette();
-    }
+    /**
+     @Test public void testLancerCalculette() throws OpException, DivisionException {
+     System.out.println("Test lancer execute");
+     gestionnaireCalculette.lancerCalculette();
+     }
+     */
 }

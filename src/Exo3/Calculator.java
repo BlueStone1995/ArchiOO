@@ -1,5 +1,8 @@
 package Exo3;
 
+import Exo3.Exception.DivisionException;
+import Exo3.Exception.OpException;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,9 +20,12 @@ public class Calculator {
         this.operations = new HashMap<String, Operation>();
     }
 
-    public void addOperation(String sym, Operation op) {
-
-        this.operations.put(sym, op); //On rajoute opération dans map
+    public void addOperation(String sym, Operation op) throws OpException {
+        if (this.op.equals("+") || this.op.equals("-") || this.op.equals("/") || this.op.equals("*")) {
+            this.operations.put(sym, op); //On rajoute opération dans map
+        } else {
+            new OpException();
+        }
     }
 
     public void init(float a, float b, String op) {
@@ -28,13 +34,13 @@ public class Calculator {
         this.op = op;
     }
 
-    public float calc() {
+    public float calc() throws OpException, DivisionException {
         Operation o = this.operations.get(this.op); //Récupère opération dans mon map via sa version string
 
         if (o == null) {
-            System.out.println("Opération inconnue");
+            throw new OpException();
+            //System.out.println("Opération inconnue");
         }
-
 
         return o.execute(a, b); // Retourne résultat
 

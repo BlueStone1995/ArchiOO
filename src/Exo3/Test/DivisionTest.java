@@ -9,6 +9,8 @@
 package Exo3.Test;
 
 import Exo3.Division;
+import Exo3.Exception.DivisionException;
+import Exo3.Exception.OpException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,7 +38,7 @@ public class DivisionTest {
     }
 
     @Test
-    public void testExecute() {
+    public void testExecute() throws OpException, DivisionException {
         System.out.println("Test execute");
         float expResult = 4;
         float result = div.execute(a, b);

@@ -6,12 +6,25 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Exo3.Exception;
+package Exo3;
 
-public class ObjetException extends Exception {
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
-    public ObjetException() {
+import static org.junit.Assert.*;
 
-        System.out.println("Opération inconnue !");
+public class AppliCalculetteTest {
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void main() {
     }
 }

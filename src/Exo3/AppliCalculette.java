@@ -7,7 +7,7 @@ public class AppliCalculette {
 
     private GestionnaireCalculette i;
 
-    AppliCalculette() throws OpException, DivisionException {
+    public AppliCalculette() throws OpException, DivisionException {
         i = new GestionnaireCalculette();
         i.lancerCalculette();
     }

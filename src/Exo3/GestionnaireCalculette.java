@@ -58,7 +58,8 @@ public class GestionnaireCalculette {
             } catch (InputMismatchException e) {
                 System.out.println("Exception : entrer un nombre\n");
             }
-            System.out.println("Nouveau calcul ? (y/n)");
+            System.out.println("Nouveau calcul ? (y/n)" + "\n" +
+                    "(entrez deux fois même réponse si non prise en compte)");
             sc.nextLine();
             cont = sc.nextLine();
         }

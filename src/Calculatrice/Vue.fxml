@@ -45,7 +45,7 @@
 
     <HBox spacing="10" alignment="CENTER">
         <Button text="Del" prefWidth="160" font="$FONT" onAction="#processDelete"/>
-        <Button text="x2" prefWidth="50" font="$FONT" onAction="#processOperator"/>
+        <Button text="^" prefWidth="50" font="$FONT" onAction="#processOperator"/>
     </HBox>
 
 </VBox>

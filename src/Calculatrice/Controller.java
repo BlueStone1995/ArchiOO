@@ -53,32 +53,31 @@ public class Controller {
             System.out.println("out: " + output.getText());
             System.out.println("op: " + operator);
 
-            if ("x2".equals(operator)) {
-                output.setText(String.valueOf(calculator.calculateUnary(number1, operator)));
-            } else {
-                // Implémentation classe Exo3
 
-                // Ajoute opérations
-                try {
-                    calculator.addOperation("+", new Addition()); //via méthode de type set : addOperation
-                    calculator.addOperation("-", new Soustraction());
-                    calculator.addOperation("*", new Multiplication());
-                    calculator.addOperation("/", new Division());
-                } catch (OpException o) {
-                    System.out.println("Opération inconnue !");
-                }
+            // Implémentation classe Exo3
 
-                // Initialise Calculator
-                calculator.init(number1, Long.parseLong(output.getText()), operator);
-
-                // Renvoie résultat
-                try {
-                    calculator.calc();
-                    output.setText(String.valueOf(calculator.calc()));
-                } catch (DivisionException e) {
-                    output.setText("Division par 0 interdite...");
-                }
+            // Ajoute opérations
+            try {
+                calculator.addOperation("+", new Addition()); //via méthode de type set : addOperation
+                calculator.addOperation("-", new Soustraction());
+                calculator.addOperation("*", new Multiplication());
+                calculator.addOperation("/", new Division());
+                calculator.addOperation("^", new Puissance());
+            } catch (OpException o) {
+                System.out.println("Opération inconnue !");
             }
+
+            // Initialise Calculator
+            calculator.init(number1, Long.parseLong(output.getText()), operator);
+
+            // Renvoie résultat
+            try {
+                calculator.calc();
+                output.setText(String.valueOf(calculator.calc()));
+            } catch (DivisionException e) {
+                output.setText("Division par 0 interdite...");
+            }
+
 
             operator = "";
             start = true;

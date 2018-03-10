@@ -29,7 +29,7 @@ public class Calculator {
     }
 
     public void addOperation(String sym, Operation op) throws OpException {
-        if (this.op.equals("+") || this.op.equals("-") || this.op.equals("/") || this.op.equals("*")) {
+        if (this.op.equals("+") || this.op.equals("-") || this.op.equals("/") || this.op.equals("*") || this.op.equals("^")) {
             this.operations.put(sym, op); //On rajoute opération dans map
         } else {
             new OpException();

@@ -8,8 +8,9 @@
 
 package Calculatrice;
 
-import Calculatrice.Exception.DivisionException;
+public class Puissance implements Operation {
 
-public interface Operation {
-    float execute(float a, float b) throws DivisionException;
+    public float execute(float a, float b) {
+        return (float) Math.pow(a, b);
+    }
 }

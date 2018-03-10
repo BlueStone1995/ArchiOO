@@ -1,5 +1,7 @@
 package Calculatrice;
 
+import Calculatrice.Exception.DivisionException;
+import Calculatrice.Exception.OpException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -34,7 +36,7 @@ public class Controller {
     }
 
     @FXML
-    private void processOperator(ActionEvent event) {
+    private void processOperator(ActionEvent event) throws OpException, DivisionException {
         String value = ((Button) event.getSource()).getText();
 
         if (!"=".equals(value)) {
@@ -57,10 +59,14 @@ public class Controller {
                 // Implémentation classe Exo3
 
                 // Ajoute opérations
-                calculator.addOperation("+", new Addition());
-                calculator.addOperation("-", new Soustraction());
-                calculator.addOperation("*", new Multiplication());
-                calculator.addOperation("/", new Division());
+                try {
+                    calculator.addOperation("+", new Addition()); //via méthode de type set : addOperation
+                    calculator.addOperation("-", new Soustraction());
+                    calculator.addOperation("*", new Multiplication());
+                    calculator.addOperation("/", new Division());
+                } catch (OpException o) {
+                    System.out.println("Opération inconnue !");
+                }
 
                 // Initialise Calculator
                 calculator.init(number1, Long.parseLong(output.getText()), operator);
@@ -69,7 +75,7 @@ public class Controller {
                 try {
                     calculator.calc();
                     output.setText(String.valueOf(calculator.calc()));
-                } catch (Error e) {
+                } catch (DivisionException e) {
                     output.setText("Division par 0 interdite...");
                 }
             }

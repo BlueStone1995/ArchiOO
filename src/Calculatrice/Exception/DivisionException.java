@@ -6,11 +6,12 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice;
+package Calculatrice.Exception;
 
-public class Soustraction implements Operation {
+public class DivisionException extends Exception {
 
-    public float execute(float a, float b) {
-        return (a - b);
+    public void DivisionException(String e) {
+
+        System.out.println("Division par 0 interdite !");
     }
 }

@@ -6,11 +6,11 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice;
+package Calculatrice.Exception;
 
-public class Soustraction implements Operation {
+public class OpException extends Exception {
 
-    public float execute(float a, float b) {
-        return (a - b);
+    public OpException() {
+        System.out.println("Opération inconnue !\n");
     }
 }

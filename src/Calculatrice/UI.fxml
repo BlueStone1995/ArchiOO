@@ -5,14 +5,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox spacing="10" alignment="CENTER" prefWidth="300" prefHeight="400" fx:controller="Calculatrice.Controller"
+<VBox spacing="10" alignment="CENTER" prefWidth="350" prefHeight="400" fx:controller="Calculatrice.Controller"
       xmlns:fx="http://javafx.com/fxml">
     <fx:define>
         <Font fx:id="FONT" size="18"/>
     </fx:define>
 
     <StackPane alignment="CENTER">
-        <Rectangle fill="TRANSPARENT" stroke="GRAY" width="230" height="50"/>
+        <Rectangle fill="TRANSPARENT" stroke="GRAY" width="300" height="100"/>
         <Text fx:id="output" font="$FONT"/>
     </StackPane>
 

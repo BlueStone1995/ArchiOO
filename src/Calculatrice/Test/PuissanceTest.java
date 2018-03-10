@@ -6,8 +6,9 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice;
+package Calculatrice.Test;
 
+import Calculatrice.Puissance;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

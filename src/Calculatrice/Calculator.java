@@ -14,7 +14,7 @@ import Calculatrice.Exception.OpException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Calculator {
+public class Calculator implements Modele {
 
     private Map<String, Operation> operations;
     private float a;
@@ -52,10 +52,4 @@ public class Calculator {
 
         return o.execute(a, b); // Retourne résultat
     }
-
-    public long calculateUnary(long number1, String operator) {
-
-        return (long) Math.pow(number1, 2);
-    }
-
 }

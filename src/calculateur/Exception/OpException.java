@@ -6,12 +6,11 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice.Exception;
+package calculateur.Exception;
 
-public class DivisionException extends Exception {
+public class OpException extends Exception {
 
-    public void DivisionException(String e) {
-
-        System.out.println("Division par 0 interdite !");
+    public OpException() {
+        System.out.println("Opération inconnue !\n");
     }
 }

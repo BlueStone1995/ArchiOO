@@ -6,14 +6,14 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice.Test;
+package calculateur.Test;
 
-import Calculatrice.Puissance;
+import calculateur.Puissance;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class PuissanceTest {
 

@@ -6,27 +6,28 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice.Test;
+package calculateur.Test;
 
-import Calculatrice.Addition;
+import calculateur.Division;
+import calculateur.Exception.DivisionException;
+import calculateur.Exception.OpException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class AdditionTest {
+public class DivisionTest {
 
-    // Données pour mes test :
-    Addition add = new Addition();
-    float a = -1;
-    float b = 3;
+    Division div = new Division();
+    float a = 8;
+    float b = 2;
 
     @Before
     public void setUp() throws Exception {
         System.out.println("Defining test data");
-        a = -1;
-        b = 3;
+        a = 8;
+        b = 2;
     }
 
     @After
@@ -37,10 +38,10 @@ public class AdditionTest {
     }
 
     @Test
-    public void testExecute() {
+    public void testExecute() throws OpException, DivisionException {
         System.out.println("Test execute");
-        float expResult = 2;
-        float result = add.execute(a, b);
+        float expResult = 4;
+        float result = div.execute(a, b);
         assertEquals(expResult, result, 0);
     }
 }

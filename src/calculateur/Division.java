@@ -6,12 +6,19 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice;
+package calculateur;
 
-public class Multiplication implements Operation {
+import calculateur.Exception.DivisionException;
 
-    public float execute(float a, float b) {
+public class Division implements Operation {
 
-        return (a * b);
+    @Override
+    public float execute(float a, float b) throws DivisionException {
+        if (b == 0) {
+            throw new DivisionException();
+        } else {
+            return (a / b);
+        }
     }
+
 }

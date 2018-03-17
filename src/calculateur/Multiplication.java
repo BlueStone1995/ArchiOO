@@ -8,12 +8,10 @@
 
 package calculateur;
 
-import calculateur.Exception.DivisionException;
-import calculateur.Exception.OpException;
+public class Multiplication implements Operation {
 
-public interface Model {
-    void init(float a, float b, String op);
+    public float execute(float a, float b) {
 
-    float calc() throws OpException, DivisionException;
-
+        return (a * b);
+    }
 }

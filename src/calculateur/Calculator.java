@@ -1,20 +1,12 @@
-/*
- * Copyright (c) 2018. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
- * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
- * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
- * Vestibulum commodo. Ut rhoncus gravida arcu.
- */
+package calculateur;
 
-package Calculatrice;
-
-import Calculatrice.Exception.DivisionException;
-import Calculatrice.Exception.OpException;
+import calculateur.Exception.DivisionException;
+import calculateur.Exception.OpException;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Calculator implements Modele {
+public class Calculator implements Model {
 
     private Map<String, Operation> operations;
     private float a;
@@ -47,7 +39,6 @@ public class Calculator implements Modele {
 
         if (o == null) {
             throw new OpException();
-            //System.out.println("Opération inconnue");
         }
 
         return o.execute(a, b); // Retourne résultat

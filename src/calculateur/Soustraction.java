@@ -6,7 +6,7 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice;
+package calculateur;
 
 public class Soustraction implements Operation {
 

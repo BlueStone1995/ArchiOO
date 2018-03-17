@@ -6,13 +6,12 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice;
+package calculateur.Exception;
 
-public class Addition implements Operation {
+public class DivisionException extends Exception {
 
-    @Override
-    public float execute(float a, float b) {
+    public void DivisionException(String e) {
 
-        return (a + b);
+        System.out.println("Division par 0 interdite !");
     }
 }

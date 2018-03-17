@@ -6,11 +6,13 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice.Exception;
+package calculateur;
 
-public class OpException extends Exception {
+public class Addition implements Operation {
 
-    public OpException() {
-        System.out.println("Opération inconnue !\n");
+    @Override
+    public float execute(float a, float b) {
+
+        return (a + b);
     }
 }

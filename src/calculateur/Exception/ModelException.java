@@ -6,19 +6,10 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice;
+package calculateur.Exception;
 
-import Calculatrice.Exception.DivisionException;
-
-public class Division implements Operation {
-
-    @Override
-    public float execute(float a, float b) throws DivisionException {
-        if (b == 0) {
-            throw new DivisionException();
-        } else {
-            return (a / b);
-        }
+public class ModelException extends Exception {
+    public ModelException() {
+        System.out.println("Model inconnue !\n");
     }
-
 }

@@ -6,16 +6,11 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice;
+package calculateur;
 
-import Calculatrice.Exception.DivisionException;
-import Calculatrice.Exception.OpException;
+public class Puissance implements Operation {
 
-public interface Modele {
-    void init(float a, float b, String op);
-
-    void addOperation(String sym, Operation op) throws OpException;
-
-    float calc() throws OpException, DivisionException;
-
+    public float execute(float a, float b) {
+        return (float) Math.pow(a, b);
+    }
 }

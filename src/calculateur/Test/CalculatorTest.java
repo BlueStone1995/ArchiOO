@@ -6,12 +6,12 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice.Test;
+package calculateur.Test;
 
-import Calculatrice.Addition;
-import Calculatrice.Calculator;
-import Calculatrice.Exception.DivisionException;
-import Calculatrice.Exception.OpException;
+import calculateur.Addition;
+import calculateur.Calculator;
+import calculateur.Exception.DivisionException;
+import calculateur.Exception.OpException;
 
 import static org.junit.Assert.assertEquals;
 

@@ -6,18 +6,19 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package Calculatrice.Test;
+package calculateur.Test;
 
-import Calculatrice.Multiplication;
+import calculateur.Soustraction;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class MultiplicationTest {
+public class SoustractionTest {
+
     // Données pour mes test :
-    Multiplication multiplication = new Multiplication();
+    Soustraction soustraction = new Soustraction();
     float a = -1;
     float b = 3;
 
@@ -38,8 +39,8 @@ public class MultiplicationTest {
     @Test
     public void testExecute() {
         System.out.println("Test execute");
-        float expResult = -3;
-        float result = multiplication.execute(a, b);
+        float expResult = -4;
+        float result = soustraction.execute(a, b);
         assertEquals(expResult, result, 0);
     }
 }

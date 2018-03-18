@@ -16,4 +16,6 @@ public interface Model {
 
     float calc() throws OpException, DivisionException;
 
+    void addOperation(String sym, Operation op) throws OpException;
+
 }

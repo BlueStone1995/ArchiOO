@@ -19,6 +19,16 @@ public class Controller {
     public float calculer(float a, float b, String op) throws OpException, DivisionException {
         Model calculator = this.model.get("calculator");
 
+        try {
+            calculator.addOperation("+", new Addition()); //via méthode de type set : addOperation
+            calculator.addOperation("-", new Soustraction());
+            calculator.addOperation("*", new Multiplication());
+            calculator.addOperation("/", new Division());
+            calculator.addOperation("^", new Puissance());
+        } catch (OpException o) {
+            System.out.println("Opération inconnue !");
+        }
+
         calculator.init(a, b, op);
         return calculator.calc();
     }

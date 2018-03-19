@@ -36,9 +36,9 @@ public class GestionnaireApp {
         // // Initialise controller
         this.controller = new Controller(); // Crée Controller
         try {
-            controller.addModele("calculator", new Calculator()); // Crée Model
+            this.controller.addModele("calculator", new Calculator()); // Crée InterfaceModel
         } catch (ModelException o) {
-            System.out.println("Model inconnue !");
+            System.out.println("InterfaceModel inconnue !");
         }
 
 

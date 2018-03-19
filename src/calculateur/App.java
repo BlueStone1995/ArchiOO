@@ -12,7 +12,7 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        // Chargement Model, Vue et Controller
+        // Chargement InterfaceModel, Vue et Controller
         GestionnaireApp gestionnaireApp = new GestionnaireApp(primaryStage);
     }
 

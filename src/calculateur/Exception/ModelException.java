@@ -10,6 +10,6 @@ package calculateur.Exception;
 
 public class ModelException extends Exception {
     public ModelException() {
-        System.out.println("Model inconnue !\n");
+        System.out.println("InterfaceModel inconnue !\n");
     }
 }

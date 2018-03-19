@@ -11,7 +11,7 @@ package calculateur;
 import calculateur.Exception.DivisionException;
 import calculateur.Exception.OpException;
 
-public interface Model {
+public interface InterfaceModel {
     void init(float a, float b, String op);
 
     float calc() throws OpException, DivisionException;

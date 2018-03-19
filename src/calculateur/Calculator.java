@@ -6,7 +6,7 @@ import calculateur.Exception.OpException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Calculator implements Model {
+public class Calculator implements InterfaceModel {
 
     private Map<String, Operation> operations;
     private float a;

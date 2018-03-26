@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="10" alignment="CENTER" prefWidth="300" prefHeight="300"  xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Font fx:id="FONT" size="18" />
+    </fx:define>
+
+    <StackPane alignment="CENTER">
+        <Rectangle fill="TRANSPARENT" stroke="GRAY" width="230" height="50" />
+        <Text fx:id="output" font="$FONT" />
+    </StackPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="7" prefWidth="50" font="$FONT" fx:id="bou7" />
+        <Button text="8" prefWidth="50" font="$FONT" fx:id="bou8" />
+        <Button text="9" prefWidth="50" font="$FONT" fx:id="bou9" />
+        <Button text="/" prefWidth="50" font="$FONT" fx:id="opdiv" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="4" prefWidth="50" font="$FONT" fx:id="bou4" />
+        <Button text="5" prefWidth="50" font="$FONT" fx:id="bou5" />
+        <Button text="6" prefWidth="50" font="$FONT" fx:id="bou6" />
+        <Button text="*" prefWidth="50" font="$FONT" fx:id="opmul" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="1" prefWidth="50" font="$FONT" fx:id="bou1" />
+        <Button text="2" prefWidth="50" font="$FONT" fx:id="bou2" />
+        <Button text="3" prefWidth="50" font="$FONT" fx:id="bou3" />
+        <Button text="-" prefWidth="50" font="$FONT" fx:id="opsous" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="0" prefWidth="50" font="$FONT" fx:id="bou0" />
+        <Button text="=" prefWidth="50" font="$FONT" fx:id="opegal" />
+        <Button text="+" prefWidth="50" font="$FONT" fx:id="opadd" />
+    </HBox>
+
+</VBox>

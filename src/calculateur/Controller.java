@@ -77,29 +77,37 @@ public class Controller {
 
     @FXML
     private void processNumpad(ActionEvent event) {
-        if (this.start) {
+        if (start) {
             output.setText("");
-            this.start = false;
+            start = false;
         }
 
         String value = ((Button) event.getSource()).getText();
         output.setText(output.getText() + value);
     }
 
+
     @FXML
     private void processOperator(ActionEvent event) {
         String value = ((Button) event.getSource()).getText();
 
-        if (!"egal".equals(value)) {
-            if (!this.operator.isEmpty())
+        if (!"=".equals(value)) {
+
+
+            if (!operator.isEmpty())
                 return;
 
-            this.operator = value;
-            this.number1 = Long.parseLong(output.getText());
+            operator = value;
+            if (output.getText().equals("")) {
+                return;
+            } else
+                number1 = Long.parseLong(output.getText());
+
             output.setText("");
         } else {
-            if (this.operator.isEmpty())
+            if (operator.isEmpty())
                 return;
+
             System.out.println("n1: " + this.number1);
             System.out.println("out: " + output.getText());
             System.out.println("op: " + this.operator);

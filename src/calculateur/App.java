@@ -14,10 +14,13 @@ public class App extends Application {
 
         // Chargement InterfaceModel, Vue et Controller
         GestionnaireApp gestionnaireApp = new GestionnaireApp(primaryStage);
+
     }
 
 
     public static void main(String[] args) {
+
         launch(args);
+
     }
 }

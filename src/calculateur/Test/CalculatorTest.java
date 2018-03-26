@@ -51,20 +51,13 @@ public class CalculatorTest {
 
 
     @org.junit.Test
-    public void testInit() {
-        System.out.println("Test init execute");
-        calculator.init(a, b, op);
-    }
-
-    @org.junit.Test
-    public void testCalc() throws OpException, DivisionException {
+    public void testCalculer() throws OpException, DivisionException {
         System.out.println("Test calc execute");
 
         calculator.addOperation(op, add);
-        calculator.init(a, b, op);
 
         float expResult = 2;
-        float result = calculator.calc();
+        float result = calculator.calculer(a, b, op);
         assertEquals(expResult, result, 0);
     }
 }

@@ -83,8 +83,10 @@ public class Controller {
                 output.setText(String.valueOf(interfaceModel.calculer(number1, Long.parseLong(output.getText()), operator)));
             } catch (DivisionException d) {
                 System.out.println("Division par O interdite...");
+                output.setText("Division par O interdite...");
             } catch (OpException o) {
                 System.out.println("Opération non définis...");
+                output.setText("Opération non définis...");
             }
             operator = "";
             start = true;
